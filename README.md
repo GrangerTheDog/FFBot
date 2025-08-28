@@ -1,0 +1,2 @@
+# FFBot
+FurryFusion bot(s)

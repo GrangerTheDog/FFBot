@@ -1,0 +1,26 @@
+[
+  {
+    "name": "security_check",
+    "description": "Check a user with the alt detector",
+    "options": [
+      {
+        "name": "user",
+        "type": 6,
+        "description": "The user to check",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "settings_securitychannel",
+    "description": "Set the channel for alt detection results",
+    "options": [
+      {
+        "name": "channel",
+        "type": 7,
+        "description": "The channel to send alt detection results to",
+        "required": true
+      }
+    ]
+  }
+]

@@ -28,4 +28,4 @@ For more information, community links, and updates, visit [furryfusion.nl](https
 - Customizable settings
 
 ## Contributing
-Pull requests and suggestions are welcome! For more info and community links, visit [furryfusion.nl](https://furryfusion.nl).
+Pull requests and suggestions are welcome!

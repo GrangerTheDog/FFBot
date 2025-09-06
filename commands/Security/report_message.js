@@ -80,6 +80,15 @@ export async function handleModalSubmit(interaction) {
         if (channel) {
             await channel.send({ embeds: [embed] });
         }
+    } else {
+        // No channel set, print to console
+        console.log(`\n--- Message Report (Server: ${guild.name}) ---`);
+        console.log(`Reporter: ${reporterDisplay} (${reporter.tag})`);
+        console.log(`Message Author: ${authorDisplay} (${authorTag})`);
+        console.log(`Message Content: ${reportedMessage?.content || 'No content (possibly deleted)'}`);
+        console.log(`Reason: ${reason}`);
+        console.log(`Message Link: ${channelId && messageId ? `https://discord.com/channels/${guild.id}/${channelId}/${messageId}` : 'Unavailable'}`);
+        console.log('--------------------------------------------\n');
     }
     await interaction.reply({ content: 'Your message report has been submitted to the moderation team.', flags: MessageFlags.Ephemeral });
 }

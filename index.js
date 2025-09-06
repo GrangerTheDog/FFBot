@@ -157,6 +157,15 @@ client.on(Events.GuildMemberAdd, async member => {
                 embeds: [embed]
             });
         }
+    } else {
+        // No channel set, print to console
+        console.log(`\n--- Alt Detector Join (Server: ${member.guild.name}) ---`);
+        console.log(`User: ${member.user.tag} (${member.user.id})`);
+        console.log(`Score: ${result.total}`);
+        console.log(`Category: ${catInfo.emoji} ${category}`);
+        console.log(`Account Age: ${ageDays} days`);
+        console.log(`Notes: ${catInfo.notes}`);
+        console.log('--------------------------------------------\n');
     }
 });
 client.on(Events.ClientReady, readyClient => {

@@ -75,6 +75,13 @@ export async function handleModalSubmit(interaction) {
         if (channel) {
             await channel.send({ embeds: [embed] });
         }
+    } else {
+        // No channel set, print to console
+        console.log(`\n--- User Report (Server: ${guild.name}) ---`);
+        console.log(`Reporter: ${reporterDisplay} (${reporter.tag} / ${reporter.id})`);
+        console.log(`Reported User: ${reportedUserDisplay} (${reportedUser.tag} / ${reportedUser.id})`);
+        console.log(`Reason: ${reason}`);
+        console.log('--------------------------------------------\n');
     }
     await interaction.reply({ content: 'Your report has been submitted to the moderation team.', flags: MessageFlags.Ephemeral });
 }
